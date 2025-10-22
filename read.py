@@ -18,8 +18,8 @@ mycursor = mydb.cursor()
 
 # qeuries the user of the program
 read_choice= input("withc database should i show?: \033[32martists\033[0m , \033[32malbums\033[0m , \033[32msongs\033[0m: ")
-if not ["artists","albums","songs"]:
-    mycursor.execute("SELECT * FROM %s ",(read_choice,))
+if read_choice in ["artists","albums","songs"]:
+    mycursor.execute(f"SELECT * FROM {read_choice}")
 else:
     print(f"\033[31m \"{read_choice}\" \033[0m is not a valid option")
     sys.exit()
