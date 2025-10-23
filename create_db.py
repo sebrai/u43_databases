@@ -1,5 +1,5 @@
 import mysql.connector
-
+# create db 
 try:
     with open("password.txt","r")  as f:
         password = f.read()
