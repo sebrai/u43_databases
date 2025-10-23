@@ -16,7 +16,7 @@ mydb = mysql.connector.connect(
 mycursor = mydb.cursor()
 # ^base info required for connection^
 
-# qeuries the user of the program
+# the main code
 read_choice= input("withc database should i show?: \033[32martists\033[0m , \033[32malbums\033[0m , \033[32msongs\033[0m: ")
 if read_choice in ["artists","albums","songs"]:
     mycursor.execute(f"SELECT * FROM {read_choice}")
